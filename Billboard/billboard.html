@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <!-- ADRIME SCREENAD META DATA (don't edit/remove) -->
+    <!-- SCRVERSION: screenad_interface_1.0.3 -->
+    <!-- SCRFORMAT: banner -->
+    <!-- SCRWIDTH: 980 -->
+    <!-- SCRHEIGHT: 200 -->
+    <!-- VER: 2 -->
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <style type="text/css">
+        body {
+            background-color: white;
+            width: 980px;            
+            height: 200px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-select: none;
+            cursor: pointer;
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            color: #B91212;
+            font-size: 13px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            background-image: url(back.jpg);
+            background-repeat: no-repeat;
+            text-align: center;
+            position: absolute;
+            padding-top: 100px;
+        }
+        video {
+            width: 300px;
+            height: 169px;
+            top: 25px;
+            left: 550px;
+        }
+        
+        #soundbutton {
+            z-index: 10000000;
+            position: absolute;
+            right:160px;
+            top:140px;
+            width:30px;
+            height:30px;
+        }
+        
+        #playbutton {
+            z-index: 10000000;
+            position: absolute;
+            right:200px;
+            top:140px;
+            width:30px;
+            height:30px;
+           
+        }
+    </style>
+    <script type="text/javascript" src="utils.min.js"></script>
+    <script type="text/javascript" src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+    <script>
+        var billboard = {
+            build: function() {
+                screenad.setSize(980, 200);
+                screenad.setAlignment("banner", "banner");
+                screenad.setZIndex(200)
+                screenad.position();
+                utils.insertVideoAt("videocontainer", {
+                    autoplay: true,
+                    file: "video",
+                    loop: false,
+                    videoposter: "video_poster.jpg",
+                    controls: "custom",
+                    //sound: false
+                }, null);
+            }
+        }
+    </script>
+</head>
+
+<body onload='billboard.build()'>
+    <div id="controls">
+        <div id="playbutton"></div>
+        <div id="soundbutton"></div>
+    </div>
+    <div id="videocontainer"></div>
+    <div id="container" onclick="screenad.click();">
+    </div>
+
+</body>
+
+
+</html>

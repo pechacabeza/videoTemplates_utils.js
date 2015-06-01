@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <!-- ADRIME SCREENAD META DATA (don't edit/remove) -->
+    <!-- SCRVERSION: screenad_interface_1.0.3 -->
+    <!-- SCRFORMAT: banner -->
+    <!-- SCRWIDTH: 300 -->
+    <!-- SCRHEIGHT: 250 -->
+
+    <meta name="description" content="">
+
+     <script type="text/javascript" src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+
+    <script type="text/javascript">
+		//_click, _mover
+		var _click = "click";
+		var _mover = "mover";
+		var _expandType = _click;
+		var _autoExpand = false;
+		var ignite = false;
+		
+		function init(){
+			
+			if (!ignite){
+
+				screenad.onSync = start;
+				ignite = true;
+			}
+		
+		}
+		
+		function start (){
+			
+			if (_expandType=== "click") {
+
+				document.getElementById('container').addEventListener("click",showLayer)
+
+			}else if (_expandType=== "mover"){
+				
+				document.getElementById('container').addEventListener("mouseenter",showLayer)
+			}
+			
+			if (_autoExpand && ignite ){
+				
+				showLayer();
+			}
+
+			screenad.setSize("300", "250");
+			screenad.setAlignment("banner", "banner");
+			screenad.setOffset(0, 0);
+			screenad.setSticky(true);
+			screenad.setZIndex(90);
+			screenad.position();
+			
+		}
+		
+		function showLayer(){
+			console.log("show_layer")
+			screenad.show("all");
+			
+		}
+		
+		
+    </script>
+</head>
+
+<body onload="init()">
+
+    <div id="container" onclick="screenad.event('user_expand');">Weborama 300x250  - (onClick)</div>
+	
+
+</body>
+
+<style type="text/css">
+	
+	body{
+		
+		font-size: 11px;
+		font-family: "Trebuchet MS";
+		text-align: center;
+		
+	}
+	
+    #container {
+        width: 298px;
+        height: 248px;
+        background-color: #FFFFFF;
+        border: 1px solid #000;
+        cursor: pointer;
+        background-image: url("bg.jpg");
+        background-repeat: no-repeat;
+    }
+</style>
+
+</html>

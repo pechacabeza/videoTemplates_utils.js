@@ -1,0 +1,57 @@
+Expandable 300x250-800x600 Video html5 Scratch (5215476552/86437)
+
+This screenad is created using Weborama technology.
+Please contact Weborama if you want to traffic this campaign.
+
+mail                    : info@weborama.nl
+phone                   : +31 (0)20 5246690
+fax                     : +31 (0)20 5246699
+ 
+CLICKS
+--------------------------------------------------------------------------------
+default                 : http://media.adrcdn.com/ads/exit.html
+
+##SCREENADCLICKS## 
+screenad_clicks = new Array();
+screenad_clicks[0] = 'http://media.adrcdn.com/ads/exit.html';
+
+##SCREENADCLICKS##
+screenad.clicks = new Array();
+screenad.clicks[0] = 'http://media.adrcdn.com/ads/exit.html';
+
+##SCREENADCLICKS##
+
+VIEWS
+--------------------------------------------------------------------------------
+There are no views defined yet.
+ 
+BANNERS
+--------------------------------------------------------------------------------
+1.file                  : mrec.html
+1.click                 : default
+
+
+SCREENADS
+--------------------------------------------------------------------------------
+There are no screenads defined yet
+
+ASSETS
+--------------------------------------------------------------------------------
+  info.txt
+  utils.js
+  utils.min.js
+  video.mp4
+  video.ogv
+  video.webm
+  video_poster.jpg
+  bg.jpg
+  close.png
+  muted.png
+  pause.png
+  play.png
+  unmuted.png
+  expand.png
+
+ITD
+--------------------------------------------------------------------------------
+There is no ITD found
